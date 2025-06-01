@@ -23,8 +23,6 @@ def set_data_path():
         print(f"Training data path does not exist: {train_path}")
         sys.exit(1)
     
-    print(f"Training data path: {train_path}")
-
     return train_path, test_path, img_height, img_width
 
 # Prepare training data from image to tf.data.Dataset

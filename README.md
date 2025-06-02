@@ -4,7 +4,7 @@ This project processes kitchenware images using OpenCV to perform edge detection
 - Automatic edge detection using Canny algorithm
 - Various thresholding techniques (Binary, Otsu's, etc.)
 - Image visualization with histograms
-- Batch processing of multiple images
+- Batch processing of multiple images across different categories (cups, dishes, plates)
 
 ## Project Setup
 
@@ -33,7 +33,7 @@ This project processes kitchenware images using OpenCV to perform edge detection
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd kitchenware-image-processing
+   cd machine_learning_ai_seminar_task_6
    ```
 
 2. Configure Git (if not already done):
@@ -45,14 +45,18 @@ This project processes kitchenware images using OpenCV to perform edge detection
 ## Project Structure
 
 ```
-.
+machine_learning_ai_seminar_task_6/
 ├── data/
 │   └── my_data/
 │       ├── test/
-│       │   └── cups/          # Input images
+│       │   ├── cups/          # Input cup images
+│       │   ├── dishes/        # Input dish images
+│       │   └── plates/        # Input plate images
 │       └── edge_detected/
 │           └── test/
-│               └── cups/      # Processed edge-detected images
+│               ├── cups/      # Processed cup images
+│               ├── dishes/    # Processed dish images
+│               └── plates/    # Processed plate images
 ├── Task6_2_Kitcheware_Image_processing.py
 ├── requirements.txt
 └── README.md
@@ -60,7 +64,10 @@ This project processes kitchenware images using OpenCV to perform edge detection
 
 ## Usage
 
-1. Place your input images in the `data/my_data/test/cups/` directory.
+1. Place your input images in their respective category folders:
+   - Cup images in `data/my_data/test/cups/`
+   - Dish images in `data/my_data/test/dishes/`
+   - Plate images in `data/my_data/test/plates/`
 
 2. Run the script:
    ```bash
@@ -68,10 +75,12 @@ This project processes kitchenware images using OpenCV to perform edge detection
    ```
 
 The script will:
-- Process all JPG/JPEG images in the input directory
+- Process all JPG/JPEG images in each category directory
 - Generate edge-detected versions of the images
-- Save the processed images in the `data/my_data/edge_detected/test/cups/` directory
-- Display visualizations of the original and processed images
+- Save the processed images in their respective category folders under `data/my_data/edge_detected/test/`
+- Display visualizations of:
+  - Original and edge-detected images for each category
+  - Various thresholding techniques applied to sample images from each category
 
 ## Dependencies
 
